@@ -1,0 +1,17 @@
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\LoginWindow.baml
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\MainWindow.baml
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\UserWindow.baml
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\LoginWindow.g.cs
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\MainWindow.g.cs
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\UserWindow.g.cs
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\App.g.cs
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem_MarkupCompile.cache
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.g.resources
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.Properties.Resources.resources
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csproj.GenerateResource.Cache
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe.config
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.exe
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\bin\Debug\BloodBankManagementSystem.pdb
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.exe
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.pdb
+C:\Users\Roshani\Documents\Visual Studio 2012\Projects\BloodBankManagementSystem\BloodBankManagementSystem\obj\Debug\BloodBankManagementSystem.csprojResolveAssemblyReference.cache

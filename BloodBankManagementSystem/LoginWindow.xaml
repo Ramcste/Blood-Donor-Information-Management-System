@@ -1,0 +1,64 @@
+﻿<Window x:Class="BloodBankManagementSystem.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoginWindow" Height="600" Width="800" Loaded="Window_Loaded_1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="140" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Images\Adminbackground.jpg" Grid.ColumnSpan="5" Grid.RowSpan="7" Stretch="UniformToFill" />
+
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Foreground="White" FontWeight="Bold"
+                           FontSize="25" HorizontalContentAlignment="Center">
+            Blood Bank Management System
+        </Label>
+
+        <Label Grid.Row="2" Grid.Column="1" Foreground="White" Margin="10" Height="28" HorizontalAlignment="Right" FontWeight="Bold" FontSize="16">
+            Name:
+        </Label>
+
+        <TextBox Name="NameTextBox" Grid.Row="2" Grid.Column="2" Height="28" Margin="10" />
+
+        <Label Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalAlignment="Right" Height="28"
+                           FontWeight="Bold" FontSize="16" Margin="10">
+            Password:
+        </Label>
+
+        <PasswordBox Name="AdminPasswordBox" Grid.Row="3" Grid.Column="2" Height="28" Margin="10" />
+        
+        <Label Grid.Row="4" Grid.Column="1" Height="30" Margin="10" HorizontalAlignment="Right" FontWeight="Bold" FontSize="16" Foreground="White">Select User Type:</Label>
+
+        <ComboBox Name="UsertypeComboBox" Grid.Row="4" Grid.Column="2" Height="28" Margin="10">
+            <ComboBoxItem>Admin</ComboBoxItem>
+            <ComboBoxItem>Normal</ComboBoxItem>
+        </ComboBox>
+        
+        <ListBox    Margin="10" Foreground="White" FontWeight="Bold" FontSize="16"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Name="EventGroupBoxlist"></ListBox>
+        
+        <Button Name="ResetButton" Grid.Row="6" Grid.Column="4" FontWeight="Bold" Height="28" MinWidth="75"
+                            HorizontalAlignment="Center" Click="ResetButton_Click">
+            Reset
+        </Button>
+
+        <Button Name="LoginButton" Grid.Row="6" Grid.Column="3" Height="28" HorizontalAlignment="Center"
+                            MinWidth="75" FontWeight="Bold" Click="LoginButton_OnClick">
+            Login
+        </Button>
+
+
+    </Grid>
+</Window>

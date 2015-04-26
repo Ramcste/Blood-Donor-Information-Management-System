@@ -1,0 +1,325 @@
+﻿<Window x:Class="BloodBankManagementSystem.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserWindow" Height="600" Width="800">
+    <Grid>
+        <TabControl Name="TC" SelectionChanged="TC_OnSelectionChanged">
+            
+            <TabItem Height="30" Header="Search by Mobile Number:">
+                <Grid Background="DarkGray">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="1" Height="28" HorizontalAlignment="Right" Margin="10"
+                           FontWeight="Bold" FontSize="16" Foreground="White">
+                        Enter Mobile Number:
+                    </Label>
+
+                    <TextBox Name="MobilenoTextBox" Grid.Row="1" Grid.Column="2" Height="28" Width="150"
+                             Margin="10,0,120,0" />
+
+                    <Button Name="SearchbyMobilenoButton" Grid.Row="1" Grid.Column="2" MinWidth="75"
+                            HorizontalAlignment="Right" Margin="0,11,20,11" Height="28"
+                            Click="SearchbyMobilenoButton_Click">
+                        Search
+                    </Button>
+
+                    <ListView Name="MobilenoListView" ItemsSource="{Binding Path= Table}" Grid.Row="2" Grid.Column="1"
+                              Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}" />
+                                <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}" />
+                                <GridViewColumn Header="Blood Group" Width="100"
+                                                DisplayMemberBinding="{Binding Bloodgroup}" />
+                                <GridViewColumn Header="Address" Width="150" DisplayMemberBinding="{Binding Address}" />
+                                <GridViewColumn Header="Current City" Width="100"
+                                                DisplayMemberBinding="{Binding Currentcity}" />
+                            </GridView>
+                        </ListView.View>
+
+
+                    </ListView>
+
+                    <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Background="DimGray">
+
+                        <Button Name="OkayButton" MinWidth="75" Height="28" FontWeight="Bold" FontSize="16"
+                                Foreground="Black" HorizontalAlignment="Right" Margin="0,12,10,10"
+                                RenderTransformOrigin="-0.147,0.679" Click="OkayButton_Click">
+                            Okay
+                        </Button>
+
+                    </Border>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Height="30" Header="Search by Current City">
+                <Grid Background="Gray">
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="1" Height="30" HorizontalAlignment="Right" Margin="10"
+                           FontWeight="Bold" FontSize="16" Foreground="White">
+                        Enter Current City Name:
+                    </Label>
+
+                    <TextBox Name="CurrentcityTextBox" Grid.Row="1" Grid.Column="2" Height="28" Margin="10,11,105,11" />
+
+                    <Button Name="SearchbyCurrentcityButton" Grid.Row="1" Grid.Column="2" MinWidth="75"
+                            HorizontalAlignment="Right" Margin="0,11,10,11" Height="28"
+                            Click="SearchbyCurrentcityButton_OnClick">
+                        Search
+                    </Button>
+
+                    <ListView Name="CurrentcityListView" ItemsSource="{Binding Path= Table}" Grid.Row="2"
+                              Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}" />
+                                <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}" />
+                                <GridViewColumn Header="Blood Group" Width="100"
+                                                DisplayMemberBinding="{Binding Bloodgroup}" />
+                                <GridViewColumn Header="Phone Number" Width="100"
+                                                DisplayMemberBinding="{Binding Phonenumber}" />
+                                <GridViewColumn Header="Address" Width="150" DisplayMemberBinding="{Binding Address}" />
+                            </GridView>
+                        </ListView.View>
+
+                    </ListView>
+
+                    <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Background="DimGray">
+
+                        <Button Name="OkayButton1" MinWidth="75" Height="28" FontWeight="Bold" FontSize="16"
+                                Foreground="Black" HorizontalAlignment="Right" Margin="0,12,10,10"
+                                RenderTransformOrigin="-0.147,0.679" Click="OkayButton1_Click">
+                            Okay
+                        </Button>
+
+                    </Border>
+
+                </Grid>
+            </TabItem>
+            <TabItem Height="30" Header="Search by Name">
+                <Grid Background="Thistle">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="1" Height="30" HorizontalAlignment="Right" Margin="10"
+                           FontWeight="Bold" FontSize="16" Foreground="White">
+                        Enter Person Name:
+                    </Label>
+
+                    <TextBox Name="NameBox" Grid.Row="1" Grid.Column="2" Height="28" Margin="10,11,105,11" />
+
+                    <Button Name="SearchbyNameButton" Grid.Row="1" Grid.Column="2" MinWidth="75"
+                            HorizontalAlignment="Right" Margin="0,11,10,11" Height="28"
+                            Click="SearchbyNameButton_OnClick">
+                        Search
+                    </Button>
+
+                    <ListView Name="NameListView" ItemsSource="{Binding Path= Table}" Grid.Row="2" Grid.Column="1"
+                              Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}" />
+                                <GridViewColumn Header="Blood Group" Width="120"
+                                                DisplayMemberBinding="{Binding Bloodgroup}" />
+                                <GridViewColumn Header="Phone Number" Width="100"
+                                                DisplayMemberBinding="{Binding Phonenumber}" />
+                                <GridViewColumn Header="Address" Width="180" DisplayMemberBinding="{Binding Address}" />
+                                <GridViewColumn Header="Current City" Width="100"
+                                                DisplayMemberBinding="{Binding Currentcity}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Background="DimGray">
+
+                        <Button Name="OkayButton2" MinWidth="75" Height="28" FontWeight="Bold" FontSize="16"
+                                Foreground="Black" HorizontalAlignment="Right" Margin="0,12,20,10"
+                                RenderTransformOrigin="-0.147,0.679" Click="OkayButton2_Click">
+                            Okay
+                        </Button>
+
+                    </Border>
+
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Height="30" Header="Search By Blood Group">
+                <Grid Background="CornflowerBlue">
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="1" Height="30" HorizontalAlignment="Right" Margin="10"
+                           FontWeight="Bold" FontSize="16" Foreground="White">
+                        Select Blood Group:
+                    </Label>
+
+                    <ComboBox Name="BloodgroupComboBox" Grid.Row="1" Grid.Column="2" Height="28" Margin="10,11,105,11">
+                        <ComboBoxItem>A+ve</ComboBoxItem>
+                        <ComboBoxItem>A-ve</ComboBoxItem>
+                        <ComboBoxItem>B+ve</ComboBoxItem>
+                        <ComboBoxItem>B-ve</ComboBoxItem>
+                        <ComboBoxItem>AB+ve</ComboBoxItem>
+                        <ComboBoxItem>AB-ve</ComboBoxItem>
+                        <ComboBoxItem>O+ve</ComboBoxItem>
+                        <ComboBoxItem>O-ve</ComboBoxItem>
+
+                    </ComboBox>
+
+                    <Button Name="SearchbybloodgroupButton" Grid.Row="1" Grid.Column="2" MinWidth="75"
+                            HorizontalAlignment="Right" Margin="0,11,10,11" Height="28"
+                            Click="SearchbybloodgroupButton_OnClick">
+                        Search
+                    </Button>
+
+                    <ListView Name="BloodgroupListView" ItemsSource="{Binding Path= Table}" Grid.Row="2"
+                              Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}" />
+                                <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}" />
+                                <GridViewColumn Header="Phone Number" Width="100"
+                                                DisplayMemberBinding="{Binding Phonenumber}" />
+                                <GridViewColumn Header="Address" Width="150" DisplayMemberBinding="{Binding Address}" />
+                                <GridViewColumn Header="Current City" Width="100"
+                                                DisplayMemberBinding="{Binding Currentcity}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Background="DimGray">
+
+                        <Button Name="OkayButton3" MinWidth="75" Height="28" FontWeight="Bold" FontSize="16"
+                                Foreground="Black" HorizontalAlignment="Right" Margin="0,12,20,10"
+                                RenderTransformOrigin="-0.147,0.679" Click="OkayButton2_Click">
+                            Okay
+                        </Button>
+
+                    </Border>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Height="30" Header=" About Developer and System">
+                <Grid Background="Gray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="16" Height="30"
+                           HorizontalContentAlignment="Center">
+                        This System is desigend to keep records of blood donors
+                    </Label>
+
+                    <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold" Height="30" FontSize="16"
+                           HorizontalContentAlignment="Center">
+                        which is required in case of emergencies.
+                    </Label>
+
+                    <Label Grid.Row="3" Grid.Column="1" FontWeight="Bold" FontSize="16" Height="30"
+                           HorizontalAlignment="Right" Margin="10">
+                        Rambabu Prasad Kushwaha
+                    </Label>
+
+                    <Image Grid.Row="3" Grid.Column="2" Source="Images\ram.jpg" Grid.RowSpan="2" Stretch="UniformToFill" />
+
+                    <Label Grid.Row="3" Grid.Column="1" Height="30" Margin="0,125,10,25" HorizontalAlignment="Right"
+                           FontWeight="Bold" FontSize="16" Width="217">
+                        lucky.guyram@gmail.com
+                    </Label>
+
+                    <Label Grid.Row="4" Grid.Column="1" Height="28" HorizontalAlignment="Right" Margin="0,53,95,69"
+                           FontWeight="Bold" FontSize="16">
+                        Version 1.0
+                    </Label>
+
+                    <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Background="YellowGreen">
+
+                        <Button Name="CloseButton" Margin="0,0,20,0" MinWidth="75" Height="28"
+                                HorizontalAlignment="Right" HorizontalContentAlignment="Center"
+                                Click="CloseButton_OnClick">
+                            Okay
+                        </Button>
+
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
